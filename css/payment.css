@@ -1,0 +1,189 @@
+.add-payment-method {
+    padding: 2rem 0;
+    min-height: calc(100vh - var(--header-height));
+    background-color: var(--body-color);
+}
+
+.add-payment-method .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.form-container {
+    background: var(--text-white-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-container h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.payment-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(0, 154, 65, 0.1);
+}
+
+.payment-option.active {
+    border-color: var(--secondary-color);
+    background-color: rgba(0, 154, 65, 0.1);
+}
+
+.payment-option i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.payment-option span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.payment-fields {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.payment-fields.active {
+    display: block;
+    opacity: 1;
+}
+
+.payment-form input,
+.payment-form select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    background: var(--body-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.payment-form input:focus,
+.payment-form select:focus {
+    border-color: var(--first-color);
+    box-shadow: 0 0 0 3px rgba(var(--first-color-rgb), 0.1);
+    outline: none;
+}
+
+.payment-form input:invalid,
+.payment-form select:invalid {
+    border-color: var(--error-color, #dc3545);
+}
+
+.payment-form input::placeholder {
+    color: var(--text-color-light);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.form-actions .btn {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.form-actions .btn:hover {
+    transform: translateY(-2px);
+}
+
+.form-actions .btn.primary {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.form-actions .btn.primary:hover {
+    background-color: var(--first-color-alt);
+}
+
+.form-actions a.btn {
+    background-color: var(--container-color);
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--border-color);
+}
+
+.form-actions a.btn:hover {
+    background-color: var(--border-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .add-payment-method {
+        padding: 1rem 0;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .form-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}

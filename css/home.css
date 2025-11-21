@@ -1,0 +1,1324 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    /* Color palette */
+    --primary-color: #000000;
+    --secondary-color: #009A41;
+    --accent-color: #27AE60;
+    --text-color: #0b0b0b;
+    --body-color: #FEFCF7;
+    --text-white-color: #FFFFFF;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+      height: 100vh;
+      background-color: #FEFCF7;
+}
+
+/* Make sure all containers respect the viewport width */
+.wrapper {
+    width: 100%;
+    max-width: 1898px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Ensure images don't cause overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--body-color);
+    height: 80px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: -70px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo img {
+    height: 160px;
+    margin-right: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 400;
+    vertical-align: middle;
+    margin-left: -100px;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo span {
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+nav ul li a.active {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.icon-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.icon-bar a {
+    color: var(--text-color);
+    font-size: 26px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.icon-bar a:hover {
+    color: var(--accent-color);
+}
+
+.wrapper-products {
+    max-width: 1898px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.recommended {
+    padding: 60px 0;
+}
+
+.recommended-content h1 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+}
+
+.recommended-content h1 span {
+    color: var(--secondary-color);
+}
+
+.product-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--body-color);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card span {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    background: var(--body-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-card span:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.product-card span:hover i {
+    color: var(--text-white-color);
+}
+
+.product-card span i {
+    font-size: 20px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+}
+
+.product-card .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: "Manrope", sans-serif;
+}
+
+.product-card .price-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.product-card .price {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+.product-card .buy-now {
+    background: var(--secondary-color);
+    color: var(--text-white-color);
+    width: 125px;
+    height: 35px;
+    padding-top: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.product-card .buy-now:hover {
+    background: var(--accent-color);
+}
+
+/* Search bar styles - centered version with updated colors */
+.search-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1000;
+}
+
+.search-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-form {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    transform: translateY(30px);
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-delay: 0.1s;
+}
+
+.search-container.active .search-form {
+    transform: translateY(0);
+}
+
+.search-input {
+    flex: 1;
+    padding: 18px 60px 18px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 15px 40px rgba(39, 174, 96, 0.2);
+    border: 1px solid var(--accent-color);
+}
+
+.search-input::placeholder {
+    color: #777;
+    opacity: 0.7;
+}
+
+.search-button {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.search-button:hover {
+    transform: translateY(-50%) scale(1.1);
+    color: var(--accent-color);
+}
+
+.search-close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.search-close:hover {
+    transform: translateY(-50%) rotate(90deg);
+    color: var(--accent-color);
+}
+
+/* Add this to make the search icon clickable */
+.search-toggle {
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+/* Add this to ensure the icon-bar has proper positioning */
+.icon-bar {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Add a subtle animation for the search icon */
+.search-toggle i {
+    transition: transform 0.3s ease;
+    color: var(--text-color);
+}
+
+.search-toggle:hover i {
+    transform: scale(1.2);
+    color: var(--secondary-color);
+}
+
+/* Sticky header styles */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Add a class for when scrolling down to make header more compact */
+header.scrolled {
+    padding: 10px 0;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    transition: padding 0.3s ease;
+}
+
+.cart-container {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1001;
+}
+
+.cart-container.active {
+    right: 0;
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h2 {
+    font-size: 36px;
+    color: var(--text-color);
+    position: relative;
+    font-family: "Manrope", sans-serif;
+}
+
+.cart-close {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.cart-close:hover {
+    transform: rotate(90deg);
+    color: var(--accent-color);
+}
+
+.cart-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.cart-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: var(--text-color);
+    font-size: 16px;
+    text-align: center;
+    font-family: "Manrope", sans-serif;
+}
+
+.cart-items {
+    display: none;
+    /* Initially hidden, will be shown when items are added */
+}
+
+footer {
+    padding: 60px 0 20px;
+    background-color: var(--text-white-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-logo h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.footer-logo a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-logo span {
+    color: var(--secondary-color);
+}
+
+.footer-links {
+    display: flex;
+    gap: 120px;
+}
+
+.footer-links h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links h3::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-links ul li a i {
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: var(--text-white-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Manrope", sans-serif;
+}
+
+.checkout-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Cart item styles */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: var(--body-color);
+    transition: all 0.3s ease;
+    transform-origin: top;
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cart-item.removing {
+    animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.cart-item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.quantity-btn {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 4px;
+    color: var(--text-color);
+}
+
+.quantity-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-white-color);
+    transform: scale(1.05);
+    border-color: var(--secondary-color);
+}
+
+.quantity-btn:active {
+    transform: scale(0.95);
+}
+
+.quantity-value {
+    padding: 0 10px;
+}
+
+.cart-item-remove {
+    color: #999;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item-remove:hover {
+    color: #ff3b30;
+    background-color: rgba(255, 59, 48, 0.1);
+    transform: scale(1.1);
+}
+
+.cart-item-remove:active {
+    transform: scale(0.95);
+}
+
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.home .wrapper {
+    width: 100%;
+    max-width: 1898px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+  
+.home-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: -200px;
+    margin-left: -25px;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home-text p {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+}
+
+.home-text p:first-child {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+}
+.home-text h1 {
+    font-size: 82px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.home-text h1 span {
+    color: var(--secondary-color);
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.home-text p:nth-child(3) {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    max-width: 90%;
+    line-height: 1.5;
+}
+
+.btn {
+    margin-top: 5px;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 154, 65, 0.2);
+}
+
+.btn:hover a {
+    color: var(--text-white-color);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    width: 250px;
+    height: 50px;
+    transition: color 0.3s ease;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Home content layout - add position relative for z-index context */
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative; /* Important for z-index to work properly */
+}
+
+/* Text section styling */
+.home-text {
+  flex: 0 0 45%;
+  padding-right: 50px;
+  z-index: 2; /* Keep text above dots */
+  position: relative; /* Needed for z-index to work */
+}
+
+/* Logo dot styling - position it absolutely within the container */
+.logo-dot {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  height: 350px;
+  justify-content: space-between;
+  align-content: space-between; /* Better for row spacing */
+  position: absolute; /* Position absolutely to place behind image */
+  right: -2%; /* Position on the right side */
+  top: 30%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  z-index: 1; /* Positive but lower than image */
+}
+
+.logo-dot span {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  margin: 2px;
+  flex: 0 0 auto;
+}
+
+/* Direct image styling - enlarged and positioned to the right */
+.home-content img {
+  flex: 0 0 45%;
+  max-width: 50%;
+  height: auto;
+  margin-left: auto;
+  object-fit: cover;
+  position: relative; /* Needed for z-index to work */
+  z-index: 2; /* Same as text, higher than dots */
+}
+
+/* Recommended Section Styling */
+
+.recommended {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--body-color);
+    position: relative;
+    padding-top: 100px;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+.wrapper-products {
+    width: 100%;
+    max-width: 1898px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.recommended-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Change back to column to stack title above cards */
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+}
+
+.recommended-content h1 {
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    z-index: 3;
+    margin-left: -25px;
+    margin-top: 20px;
+}
+
+.recommended-content h1 span {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Add this new container for the cards */
+.product-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-left: -25px;
+}
+
+.product-card {
+    background-color: #00000008;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 350px;
+    margin-bottom: 0;
+    margin-left: 0;
+    flex: 0 0 auto;
+}
+
+.product-card span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--text-white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.product-card span i {
+    color: var(--secondary-color);
+    font-size: 28px;
+}
+
+/* home page styles */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.home .wrapper {
+    width: 100%;
+    max-width: 1898px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+  
+.home-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: -200px;
+    margin-left: -25px;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home-text p {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+}
+
+.home-text p:first-child {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+}
+.home-text h1 {
+    font-size: 82px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.home-text h1 span {
+    color: var(--secondary-color);
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.home-text p:nth-child(3) {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    max-width: 90%;
+    line-height: 1.5;
+}
+
+.btn {
+    margin-top: 5px;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 154, 65, 0.2);
+}
+
+.btn:hover a {
+    color: var(--text-white-color);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    width: 250px;
+    height: 50px;
+    transition: color 0.3s ease;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Home content layout - add position relative for z-index context */
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative; /* Important for z-index to work properly */
+}
+
+/* Text section styling */
+.home-text {
+  flex: 0 0 45%;
+  padding-right: 50px;
+  z-index: 2; /* Keep text above dots */
+  position: relative; /* Needed for z-index to work */
+}
+
+/* Logo dot styling - position it absolutely within the container */
+.logo-dot {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  height: 350px;
+  justify-content: space-between;
+  align-content: space-between; /* Better for row spacing */
+  position: absolute; /* Position absolutely to place behind image */
+  right: -2%; /* Position on the right side */
+  top: 30%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  z-index: 1; /* Positive but lower than image */
+}
+
+.logo-dot span {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  margin: 2px;
+  flex: 0 0 auto;
+}
+
+/* Direct image styling - enlarged and positioned to the right */
+.home-content img {
+  flex: 0 0 45%;
+  max-width: 50%;
+  height: auto;
+  margin-left: auto;
+  object-fit: cover;
+  position: relative; /* Needed for z-index to work */
+  z-index: 2; /* Same as text, higher than dots */
+}
+
+/* Recommended Section Styling */
+
+.recommended {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--body-color);
+    position: relative;
+    padding-top: 100px;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+.wrapper-products {
+    width: 100%;
+    max-width: 1898px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.recommended-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Change back to column to stack title above cards */
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+}
+
+.recommended-content h1 {
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    z-index: 3;
+    margin-left: -25px;
+    margin-top: 20px;
+}
+
+.recommended-content h1 span {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Add this new container for the cards */
+.product-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-left: -25px;
+}
+
+.product-card {
+    background-color: #00000008;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 350px;
+    margin-bottom: 0;
+    margin-left: 0;
+    flex: 0 0 auto;
+}
+
+.product-card span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--text-white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.product-card span i {
+    color: var(--secondary-color);
+    font-size: 28px;
+}
+
+.bar {
+    background-color: var(--secondary-color);
+    padding: 8px 0;
+}
+
+.bar-content {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.bar-content a {
+    text-decoration: none;
+}
+
+.bar-content p {
+    color: var(--text-white-color);
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.bar-content a:hover p {
+    opacity: 0.8;
+}

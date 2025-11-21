@@ -1,0 +1,58 @@
+.alert {
+    padding: 16px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease-out;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: fit-content;
+    max-width: 90%;
+}
+
+.alert::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.alert-success {
+    background-color: #ebf7ed;
+    color: #0a5d1d;
+    border: 1px solid #b7e4c7;
+}
+
+.alert-success::before {
+    content: "\f058";
+    color: #0a5d1d;
+}
+
+.alert-error {
+    background-color: #fdf2f3;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+}
+
+.alert-error::before {
+    content: "\f057";
+    color: #842029;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
